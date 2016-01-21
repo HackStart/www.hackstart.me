@@ -7,6 +7,7 @@ var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
+var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync');
 
 // Lint Task
@@ -20,6 +21,7 @@ gulp.task('lint', function() {
 gulp.task('sass', function() {
     return gulp.src('scss/*.scss')
         .pipe(sass())
+        .pipe(autoprefixer())
         .pipe(gulp.dest('css'))
         .pipe(browserSync.stream());
 });
