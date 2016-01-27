@@ -14,38 +14,38 @@ body {
     width: 100%;
     background-color: white; }
     body nav ul {
-      float: right;
-      margin: 0;
-      height: 50px; }
+      margin: 0; }
       body nav ul li {
         display: inline-block;
-        padding: 0px 10px;
+        padding: 0 10px;
         margin: 0;
-        height: 100%;
-        vertical-align: middle; }
+        -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+        float: right; }
+        body nav ul li:hover {
+          background-color: blue; }
+        body nav ul li a,
         body nav ul li div.dropdown {
           position: relative;
           display: inline-block;
-          height: 100%; }
-          body nav ul li div.dropdown .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 50px;
-            background-color: rgba(249, 249, 249, 0);
-            min-width: 160px;
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
-            body nav ul li div.dropdown .dropdown-content a {
-              color: black;
-              padding: 12px 16px;
-              text-decoration: none;
-              display: block; }
-              body nav ul li div.dropdown .dropdown-content a a:hover {
-                background-color: #f1f1f1; }
-          body nav ul li div.dropdown:hover .dropdown-content {
-            display: block;
-            background-color: #f9f9f9; }
-      body nav ul li:hover {
-        background-color: blue; }
+          height: 3em;
+          line-height: 3em;
+          text-decoration: none; }
+        body nav ul li div.dropdown .dropdown-content {
+          display: none;
+          position: fixed;
+          top: 3em;
+          background-color: white;
+          min-width: 160px;
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+          body nav ul li div.dropdown .dropdown-content a {
+            color: black;
+            line-height: 1em;
+            padding: 12px 16px;
+            height: 100%;
+            display: block; }
+        body nav ul li div.dropdown:hover .dropdown-content {
+          display: block; }
   body div.header {
     display: block;
     position: relative;
