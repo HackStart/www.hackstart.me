@@ -6,71 +6,122 @@ html {
   margin: 0; }
 
 body {
-  font-family: 'lato' sans-serif;
-  background-color: #607D8B; }
-  body nav {
-    z-index: 5;
-    position: fixed;
-    width: 100%;
-    background-color: white; }
-    body nav ul {
-      margin: 0; }
-      body nav ul li {
-        display: inline-block;
-        padding: 0 10px;
-        margin: 0;
-        -webkit-transition-duration: 0.3s;
-                transition-duration: 0.3s;
-        float: right; }
-        body nav ul li:hover {
-          background-color: blue; }
-        body nav ul li a,
-        body nav ul li div.dropdown {
-          position: relative;
-          display: inline-block;
-          height: 3em;
-          line-height: 3em;
-          text-decoration: none; }
-        body nav ul li div.dropdown .dropdown-content {
-          display: none;
-          position: fixed;
-          top: 3em;
-          background-color: white;
-          min-width: 160px;
-          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
-          body nav ul li div.dropdown .dropdown-content a {
-            color: black;
-            line-height: 1em;
-            padding: 12px 16px;
-            height: 100%;
-            display: block; }
-        body nav ul li div.dropdown:hover .dropdown-content {
-          display: block; }
-  body div.header {
-    display: block;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: url(../img/hackstart_banner_compress.jpg) no-repeat center center;
-    background-size: cover; }
-    body div.header div.titletext {
-      color: white;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      text-align: center; }
-  body footer {
-    background-color: #424242;
-    position: relative;
-    text-align: center; }
-    body footer div {
+  font-family: 'Lato', sans-serif;
+  background-color: white; }
+
+nav {
+  z-index: 5;
+  position: fixed;
+  width: 100%;
+  background-color: white; }
+  nav ul {
+    margin: 0;
+    float: right; }
+    nav ul li {
       display: inline-block;
-      position: relative;
-      vertical-align: top;
-      text-align: left; }
-      body footer div ul {
+      padding: 0 10px;
+      margin: 0;
+      color: white;
+      -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s;
+      background-color: gray; }
+      nav ul li:hover {
+        background-color: blue; }
+      nav ul li a,
+      nav ul li div.dropdown {
+        position: relative;
+        display: inline-block;
+        height: 3em;
+        line-height: 3em;
+        text-decoration: none;
+        color: inherit; }
+      nav ul li div.dropdown .dropdown-content {
+        display: none;
+        position: fixed;
+        top: 3em;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
+        nav ul li div.dropdown .dropdown-content a {
+          color: black;
+          line-height: 1em;
+          padding: 12px 16px;
+          height: 100%;
+          display: block; }
+      nav ul li div.dropdown:hover .dropdown-content {
         display: block; }
-        body footer div ul li {
-          list-style: none; }
+
+a.button {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px; }
+  a.button:hover {
+    background-color: lightgreen;
+    box-shadow: 0 8px 13px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 0; }
+
+section {
+  min-height: 300px;
+  color: #333; }
+
+section#header {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../img/hackstart_banner_compress.jpg) no-repeat center center;
+  background-size: cover;
+  z-index: -1; }
+  section#header div.titletext {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center; }
+
+section#about {
+  margin-top: -200px;
+  z-index: 200;
+  background-color: white; }
+
+footer {
+  background-color: #424242;
+  position: relative;
+  text-align: center;
+  color: white; }
+  footer div.break {
+    display: block;
+    margin: 20px auto;
+    background-color: white;
+    width: 120px;
+    height: 3px; }
+  footer div {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    text-align: left;
+    margin: 0px 10px; }
+    footer div div.break {
+      width: 30px;
+      height: 5px; }
+    footer div ul {
+      padding: 0;
+      margin-top: 0;
+      display: block; }
+      footer div ul li {
+        list-style: none; }
+        footer div ul li a {
+          text-decoration: none;
+          color: inherit;
+          -webkit-transition-duration: .2s;
+                  transition-duration: .2s; }
+          footer div ul li a:hover {
+            color: gray; }
