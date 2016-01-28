@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="
     https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css" media="screen" title="no title" charset="utf-8">
-	<link href='https://fonts.googleapis.com/css?family=Lato:400,300,100' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Karla:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css\style.css" media="screen" title="no title" charset="utf-8">
 
@@ -31,6 +31,15 @@
 			</li>
 			<li>
 				<div class="dropdown">
+					<a name="dropbtn">Organize</a>
+					<div class="dropdown-content">
+						<a href="#">Host an event</a>
+						<a href="#">Form a club</a>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="dropdown">
 					<a name="dropbtn">Support Us</a>
 					<div class="dropdown-content">
 						<a href="#">Volunteer</a>
@@ -43,31 +52,119 @@
 	</nav>
 
 	<section id="header">
-		<div class="titletext">
-			<h2>HackStart Spring 2016</h2>
-			<h3>More info to be announced soon.</h3>
-			<a class="button" href="#">Stay updated</a>
+		<div class="mask">
+			<div class="titletext">
+				<h2>HackStart Spring 2016</h2>
+				<h3>More info to be announced soon.</h3>
+				<a class="button" href="#">Stay updated</a>
+			</div>
 		</div>
 	</section>
 
 	<section id="about">
-		<h2>About</h2>
-		<p>
-			Sed rutrum condimentum sem, tempus ornare nibh finibus ut. Phasellus elit tortor, porttitor et risus id, cursus euismod elit. Sed sit amet libero a leo varius rhoncus nec ut ex. Mauris metus lectus, ornare tristique pellentesque ornare, pellentesque quis
-			nisl. Vestibulum mollis nisi eget luctus volutpat. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed enim velit, porttitor in purus in, ornare condimentum sapien. Aenean accumsan placerat est sit amet auctor.
-			Duis accumsan bibendum nunc et fringilla. Ut sollicitudin placerat nisi, ac viverra eros. Fusce at eros vehicula, ornare est nec, lobortis ante. Cras ultricies facilisis mi viverra commodo.
-		</p>
+		<div class="images">
+			<ul>
+				<li>
+					<div class="">
+						<img src="img/wip.png" alt="" />
+						<p>Caption</p>
+					</div>
+				</li>
+				<li>
+					<div class="">
+						<img src="img/wip.png" alt="" />
+						<p>Caption</p>
+					</div>
+				</li>
+				<li>
+					<div class="">
+						<img src="img/wip.png" alt="" />
+						<p>Caption</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="container">
+			<h2>Who we are</h2>
+			<h3>
+				Sed rutrum condimentum sem, tempus ornare nibh finibus ut.
+			</h3>
+			<h4>
+				Sed sit amet libero a leo varius rhoncus nec ut ex. Mauris metus lectus, ornare tristique pellentesque ornare, pellentesque quis
+			</h4>
+		</div>
+	</section>
+
+	<section id="why">
+		<div class="container">
+			<h2>Why it matters</h2>
+			<h3>@aditya Graphs + text or description?</h3>
+			<h4>
+				Sed sit amet libero a leo varius rhoncus nec ut ex. Mauris metus lectus, ornare tristique pellentesque ornare, pellentesque quis. Sed rutrum condimentum sem, tempus ornare nibh finibus ut.
+			</h4>
+		</div>
 	</section>
 
 	<section id="team">
-		<h2>Our Team</h2>
-		<p>
-			copy the one from hackstart.me
-		</p>
+		<div class="container">
+			<h2>Our Team</h2>
+			<h3>The Directors</h3>
+			<p class="hint">(Hover over the portraits!)</p>
+			<ul class="people">
+				<li ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+
+						<div class="front" id="anthony">
+							<h3>Aditya Sood</h3>
+							<div class="bottom">
+								<h4>University of Georgia</h4>
+							</div>
+						</div>
+						<div class="back">
+							Sed sit amet libero a leo varius rhoncus nec ut ex. Mauris metus lectus, ornare tristique pellentesque ornare, pellentesque quis. Sed rutrum condimentum sem, tempus ornare nibh finibus ut.
+						</div>
+
+					</div>
+				</li>
+				<li ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+
+						<div class="front" id="anthony">
+							<h3>Anthony Liu</h3>
+							<div class="bottom">
+								<h4>Alpharetta High School</h4>
+							</div>
+						</div>
+						<div class="back">
+							Sed sit amet libero a leo varius rhoncus nec ut ex. Mauris metus lectus, ornare tristique pellentesque ornare, pellentesque quis. Sed rutrum condimentum sem, tempus ornare nibh finibus ut.
+						</div>
+
+					</div>
+				</li>
+				<li ontouchstart="this.classList.toggle('hover');">
+					<div class="flipper">
+
+						<div class="front" id="anthony">
+							<h3>Nitish Sood</h3>
+							<div class="bottom">
+								<h4>Alpharetta High School</h4>
+							</div>
+						</div>
+						<div class="back">
+							Sed sit amet libero a leo varius rhoncus nec ut ex. Mauris metus lectus, ornare tristique pellentesque ornare, pellentesque quis. Sed rutrum condimentum sem, tempus ornare nibh finibus ut.
+						</div>
+
+					</div>
+				</li>
+			</ul>
+		</div>
 	</section>
 
+
 	<section id="sponsors">
-		<h2>Past Hackathon Sponsors</h2>
+		<div class="container">
+			<h2>Past Hackathon Sponsors</h2>
+		</div>
 	</section>
 
 	<footer>

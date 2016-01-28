@@ -6,14 +6,18 @@ html {
   margin: 0; }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Karla', sans-serif;
   background-color: white; }
+
+p.hint {
+  margin-top: -20px; }
 
 nav {
   z-index: 5;
   position: fixed;
   width: 100%;
-  background-color: white; }
+  background-color: lightblue;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
   nav ul {
     margin: 0;
     float: right; }
@@ -21,25 +25,26 @@ nav {
       display: inline-block;
       padding: 0 10px;
       margin: 0;
-      color: white;
+      color: black;
       -webkit-transition-duration: 0.3s;
               transition-duration: 0.3s;
-      background-color: gray; }
+      background-color: transparent; }
       nav ul li:hover {
-        background-color: blue; }
+        background-color: #86c5da; }
       nav ul li a,
       nav ul li div.dropdown {
         position: relative;
         display: inline-block;
-        height: 3em;
-        line-height: 3em;
+        height: 50px;
+        line-height: 50px;
         text-decoration: none;
-        color: inherit; }
+        color: inherit;
+        cursor: pointer; }
       nav ul li div.dropdown .dropdown-content {
         display: none;
         position: fixed;
-        top: 3em;
-        background-color: white;
+        top: 50px;
+        background-color: #86c5da;
         min-width: 160px;
         box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
         nav ul li div.dropdown .dropdown-content a {
@@ -54,21 +59,21 @@ nav {
 a.button {
   display: inline-block;
   padding: 10px 15px;
-  background-color: green;
+  background-color: #ef5350;
   color: white;
   text-decoration: none;
-  -webkit-transition-duration: .2s;
-          transition-duration: .2s;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px; }
   a.button:hover {
-    background-color: lightgreen;
+    background-color: #ff8a80;
     box-shadow: 0 8px 13px 0 rgba(0, 0, 0, 0.2);
     border-radius: 0; }
 
 section {
   min-height: 300px;
-  color: #333; }
+  color: rgba(0, 0, 0, 0.7); }
 
 section#header {
   display: block;
@@ -76,27 +81,113 @@ section#header {
   width: 100%;
   height: 100%;
   background: url(../img/hackstart_banner_compress.jpg) no-repeat center center;
-  background-size: cover;
-  z-index: -1; }
-  section#header div.titletext {
-    color: white;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    text-align: center; }
+  background-size: cover; }
+  section#header div.mask {
+    height: 100%;
+    background: -webkit-linear-gradient(transparent, black);
+    background: linear-gradient(transparent, black); }
+    section#header div.mask div.titletext {
+      color: white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      text-align: center; }
+
+section div.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center; }
+  section div.container h2 {
+    font-size: 3em; }
+  section div.container h3,
+  section div.container h4 {
+    font-size: 1.5em; }
+  section div.container h4 {
+    font-weight: 400; }
 
 section#about {
-  margin-top: -200px;
-  z-index: 200;
-  background-color: white; }
+  margin-top: 30px;
+  margin-bottom: 50px; }
+  section#about div.images {
+    text-align: center; }
+    section#about div.images ul li {
+      display: inline-block;
+      list-style: none; }
+      section#about div.images ul li img {
+        height: 200px; }
+      section#about div.images ul li p {
+        margin: 5px;
+        font-weight: 700; }
+
+section#why {
+  padding-top: 30px;
+  background-color: #ef5350;
+  color: white;
+  padding-bottom: 30px; }
+
+section#team .container {
+  max-width: none; }
+
+section#team ul.people li {
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  list-style: none;
+  display: inline-block;
+  margin: 0 5px; }
+  section#team ul.people li:hover .flipper {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg); }
+  section#team ul.people li .flipper {
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    position: relative;
+    /* back, initially hidden pane */ }
+    section#team ul.people li .flipper h3, section#team ul.people li .flipper h4 {
+      margin: 10px 0; }
+    section#team ul.people li .flipper .bottom {
+      position: absolute;
+      bottom: 0;
+      width: 100%; }
+    section#team ul.people li .flipper .front,
+    section#team ul.people li .flipper .back {
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: 0 8px 13px 0 rgba(0, 0, 0, 0.2); }
+    section#team ul.people li .flipper .front {
+      z-index: 2;
+      /* for firefox 31 */
+      -webkit-transform: rotateY(0deg);
+              transform: rotateY(0deg);
+      color: white; }
+      section#team ul.people li .flipper .front#anthony {
+        background: url(../img/wip.png) no-repeat center center;
+        background-size: cover; }
+    section#team ul.people li .flipper .back {
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg); }
+
+section#team ul.people li,
+section#team ul.people .front,
+section#team ul.people .back {
+  width: 250px;
+  height: 300px; }
+
+section#sponsors {
+  margin-top: 150px; }
 
 footer {
   background-color: #424242;
   position: relative;
   text-align: center;
-  color: white; }
+  color: white;
+  padding-bottom: 20px; }
   footer div.break {
     display: block;
     margin: 20px auto;
@@ -108,10 +199,11 @@ footer {
     position: relative;
     vertical-align: top;
     text-align: left;
-    margin: 0px 10px; }
+    margin: 0 10px; }
     footer div div.break {
       width: 30px;
-      height: 5px; }
+      height: 5px;
+      margin: 20px 0; }
     footer div ul {
       padding: 0;
       margin-top: 0;
@@ -121,7 +213,7 @@ footer {
         footer div ul li a {
           text-decoration: none;
           color: inherit;
-          -webkit-transition-duration: .2s;
-                  transition-duration: .2s; }
+          -webkit-transition-duration: 0.2s;
+                  transition-duration: 0.2s; }
           footer div ul li a:hover {
             color: gray; }
