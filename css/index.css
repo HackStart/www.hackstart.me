@@ -1,0 +1,319 @@
+@font-face {
+  font-family: 'NexaLight';
+  src: url("../font/NexaThin.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../font/AvenirNext-UltraLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../font/AvenirNext-UltraLightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../font/AvenirNext-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../font/AvenirNext-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../font/AvenirNext-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../font/AvenirNext-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../font/AvenirNext-DemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../font/AvenirNext-DemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../font/AvenirNext-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../font/AvenirNext-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../font/AvenirNext-Heavy.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url("../font/AvenirNext-HeavyItalic.ttf") format("truetype");
+  font-weight: 800;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Landscape';
+  src: url("../font/Landscape-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+a.button {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #00b09f;
+  padding: 5px;
+  width: 200px;
+  -webkit-transition: .2s;
+  transition: .2s; }
+  a.button:link, a.button:visited {
+    color: white; }
+  a.button:active, a.button:focus {
+    background-color: #17ffe9;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  a.button:hover {
+    background-color: #00e3cd;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+  a.button.primary {
+    background-color: #14b4fc; }
+    a.button.primary:active, a.button.primary:focus {
+      background-color: #79d4fd; }
+    a.button.primary:hover {
+      background-color: #47c4fd; }
+
+body {
+  width: 100%;
+  background-color: #282C34;
+  color: white;
+  font-size: calc((18/16*100%) + (18 - 16) * (100vw - 600px) / (1000 - 600));
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Avenir Next', sans-serif; }
+
+h2 {
+  font-weight: 600; }
+
+p {
+  font-weight: 300; }
+
+p.hint {
+  font-size: 0.6em;
+  margin: 0; }
+
+ul.blocks {
+  margin: 0; }
+  ul.blocks li {
+    list-style: none;
+    display: inline-block; }
+
+section {
+  width: 100%;
+  padding: 100px 0;
+  text-align: center; }
+
+.toc {
+  width: 100vw;
+  height: 40px;
+  background-color: #1f1f1f;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  line-height: 40px; }
+  .toc a.home {
+    margin-left: 50px;
+    color: white;
+    font-family: 'NexaLight', sans-serif;
+    text-decoration: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; }
+    .toc a.home span {
+      color: #f55a4e; }
+  .toc ul {
+    float: right;
+    margin-right: 50px; }
+    .toc ul a {
+      height: 100%;
+      background-color: #1f1f1f;
+      -webkit-transition: 0.2s;
+      transition: 0.2s;
+      text-decoration: none;
+      color: white;
+      padding: 0 10px; }
+      .toc ul a:hover {
+        color: rgba(0, 0, 0, 0.87);
+        background-color: #ebebeb; }
+
+header {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: calc(100vh - 40px);
+  margin-top: 40px; }
+  header .banner {
+    width: 100%;
+    height: 80%;
+    background: url(../assets/hackstart_banner_compress.jpg) no-repeat center center;
+    background-size: cover; }
+    header .banner .gradient {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: -webkit-linear-gradient(transparent, #282C34);
+      background: linear-gradient(transparent, #282C34); }
+  header .logo {
+    width: 20em;
+    position: absolute;
+    top: calc(50% - 50px);
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center; }
+    header .logo h1,
+    header .logo h2 {
+      margin: 0;
+      font-weight: 300; }
+    header .logo h2 {
+      -webkit-transform: translate(-50%);
+              transform: translate(-50%);
+      margin-left: 50%;
+      white-space: nowrap;
+      text-align: left; }
+    header .logo ul {
+      margin-top: 30px; }
+      header .logo ul li {
+        margin-bottom: 10px; }
+
+#about {
+  padding-top: 0; }
+  #about ul.images {
+    display: block;
+    white-space: nowrap; }
+    #about ul.images li img {
+      width: 8em;
+      margin: 5px; }
+    #about ul.images li p {
+      display: block;
+      margin: 0;
+      width: 100%;
+      font-size: .5em;
+      line-height: 14px;
+      font-weight: 400;
+      padding: 0; }
+  #about p {
+    padding: 0 25%; }
+    #about p:nth-of-type(1) {
+      font-weight: 500; }
+
+#why {
+  background-color: #f55a4e; }
+  #why p {
+    padding: 0 25%;
+    font-weight: 400; }
+    #why p:nth-of-type(1) {
+      font-weight: 600; }
+
+#team {
+  padding-bottom: 0; }
+  #team h2 {
+    margin-bottom: 0; }
+  #team ul.people li {
+    -webkit-perspective: 1000;
+            perspective: 1000;
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px; }
+    #team ul.people li:hover .flipper {
+      -webkit-transform: rotateY(180deg);
+              transform: rotateY(180deg); }
+    #team ul.people li .flipper {
+      -webkit-transition: 0.6s;
+      transition: 0.6s;
+      -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      position: relative;
+      /* back, initially hidden pane */ }
+      #team ul.people li .flipper h3,
+      #team ul.people li .flipper h4 {
+        margin: 10px 0; }
+      #team ul.people li .flipper .bottom {
+        position: absolute;
+        bottom: 0;
+        width: 100%; }
+      #team ul.people li .flipper .back,
+      #team ul.people li .flipper .front {
+        -webkit-backface-visibility: hidden;
+                backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-shadow: 0 8px 13px 0 rgba(0, 0, 0, 0.2); }
+      #team ul.people li .flipper .front {
+        z-index: 2;
+        /* for firefox 31 */
+        -webkit-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+        color: white; }
+        #team ul.people li .flipper .front#anthony {
+          background: url("../assets/wip.png") no-repeat center center;
+          background-size: cover; }
+      #team ul.people li .flipper .back {
+        -webkit-transform: rotateY(180deg);
+                transform: rotateY(180deg);
+        background-color: white;
+        color: rgba(0, 0, 0, 0.87);
+        font-size: .8em; }
+  #team ul.people .back,
+  #team ul.people .front,
+  #team ul.people li {
+    width: 250px;
+    height: 300px; }
+  #team p {
+    font-weight: 400; }

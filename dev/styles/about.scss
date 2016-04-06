@@ -1,0 +1,33 @@
+#about {
+  padding-top: 0;
+
+  ul.images {
+    display: block;
+    white-space: nowrap;
+
+    li {
+      img {
+        width: 8em;
+        margin: 5px;
+      }
+
+      p {
+        display: block;
+        margin: 0;
+        width: 100%;
+        font-size: .5em;
+        line-height: 14px;
+        font-weight: 400;
+        padding: 0;
+      }
+    }
+  }
+
+  p {
+    padding: 0 25%;
+
+    &:nth-of-type(1) {
+      font-weight: 500;
+    }
+  }
+}

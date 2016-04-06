@@ -1,0 +1,50 @@
+@import "variables";
+@import "font";
+@import "typejs";
+@import "button";
+
+body {
+  width: 100%;
+  background-color: $black;
+  color: $primary-light-color;
+  font-size: calc((18/16*100%) + (18 - 16) * (100vw - 600px) / (1000 - 600));
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Avenir Next', sans-serif;
+}
+
+h2 {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 300;
+}
+
+p.hint {
+  font-size: 0.6em;
+  margin: 0;
+}
+
+ul.blocks {
+  margin: 0;
+
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+}
+
+section {
+  width: 100%;
+  padding: 100px 0;
+  text-align: center;
+}
+
+
+@import "toc";
+@import "header";
+@import "about";
+@import "why";
+@import "team";

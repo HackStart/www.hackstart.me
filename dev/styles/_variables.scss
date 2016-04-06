@@ -1,0 +1,13 @@
+@import "variablesdefault";
+
+$black: #282C34;
+
+$toc-height: 40px;
+
+$button-color: lighten($md-teal, 5%);
+$button-color-hover: lighten($md-teal, 15%);
+$button-color-active: lighten($md-teal, 25%);
+
+$button-color-primary: lighten($md-light-blue, 5%);
+$button-color-primary-hover: lighten($md-light-blue, 15%);
+$button-color-primary-active: lighten($md-light-blue, 25%);

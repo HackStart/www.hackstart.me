@@ -1,0 +1,12 @@
+#why {
+  background-color: lighten($md-red,5%);
+
+  p {
+    padding: 0 25%;
+    font-weight: 400;
+
+    &:nth-of-type(1) {
+      font-weight: 600;
+    }
+  }
+}
