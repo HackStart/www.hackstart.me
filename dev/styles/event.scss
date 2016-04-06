@@ -54,7 +54,7 @@ section#events {
       &#hackstart-summer .background {
         background: url("../assets/event-hackstart.jpg") no-repeat center center;
         background-size: cover;
-        background-color: darken($black, 10%);
+        background-color: $black
       }
 
       &#local-hack-day {
@@ -65,7 +65,7 @@ section#events {
         .background {
           background: url("../assets/event-hackahs.jpg") no-repeat center center;
           background-size: cover;
-          background-color: darken($black, 10%);
+          background-color: $black;
         }
       }
       &#local-hack-day {
@@ -76,7 +76,7 @@ section#events {
         .background {
           background: url("../assets/event-hackahs.jpg") no-repeat center center;
           background-size: cover;
-          background-color: darken($black, 10%);
+          background-color: $black;
         }
       }
       &#refugee-hack {
@@ -87,7 +87,7 @@ section#events {
         .background {
           background: url("../assets/event-refugeehack.jpg") no-repeat center center;
           background-size: cover;
-          background-color: darken($black, 10%);
+          background-color: $black;
         }
       }
     }
