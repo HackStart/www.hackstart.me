@@ -146,6 +146,15 @@ p.hint {
   font-size: 0.6em;
   margin: 0; }
 
+a {
+  color: #2196F3;
+  -webkit-transition: .2s;
+  transition: .2s; }
+  a:hover {
+    color: #0c7cd5; }
+  a:focus, a:active {
+    color: #0960a5; }
+
 ul.blocks {
   margin: 0; }
   ul.blocks li {
@@ -154,8 +163,16 @@ ul.blocks {
 
 section {
   width: 100%;
-  padding: 100px 0;
+  padding: 70px 0;
   text-align: center; }
+
+a.down {
+  color: white;
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-size: 1.5em; }
+  a.down:hover {
+    color: rgba(255, 255, 255, 0.7); }
 
 .toc {
   width: 100vw;
@@ -163,8 +180,7 @@ section {
   background-color: #1f1f1f;
   position: fixed;
   top: 0;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  line-height: 40px; }
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
   .toc a.home {
     margin-left: 50px;
     color: white;
@@ -173,20 +189,26 @@ section {
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
-            user-select: none; }
+            user-select: none;
+    line-height: 40px; }
     .toc a.home span {
       color: #f55a4e; }
   .toc ul {
     float: right;
-    margin-right: 50px; }
+    margin-right: 50px;
+    height: 40px; }
     .toc ul a {
-      height: 100%;
+      line-height: 40px;
+      display: block;
+      margin: 0;
+      height: 40px;
       background-color: #1f1f1f;
       -webkit-transition: 0.2s;
       transition: 0.2s;
       text-decoration: none;
       color: white;
-      padding: 0 10px; }
+      padding: 0 10px;
+      font-size: 16px; }
       .toc ul a:hover {
         color: rgba(0, 0, 0, 0.87);
         background-color: #ebebeb; }
@@ -302,14 +324,26 @@ header {
                 transform: rotateY(0deg);
         color: white; }
         #team ul.people li .flipper .front#anthony {
-          background: url("../assets/wip.png") no-repeat center center;
+          background: url("../assets/port_anthony.jpg") no-repeat center center;
           background-size: cover; }
+        #team ul.people li .flipper .front#aditya {
+          color: rgba(0, 0, 0, 0.54);
+          background: url("../assets/port_aditya.jpg") no-repeat center center;
+          background-size: cover;
+          -webkit-filter: grayscale(100%);
+                  filter: grayscale(100%); }
+        #team ul.people li .flipper .front#nitish {
+          background: url("../assets/port_nitish.jpg") no-repeat center center;
+          background-size: cover;
+          -webkit-filter: grayscale(100%);
+                  filter: grayscale(100%); }
       #team ul.people li .flipper .back {
         -webkit-transform: rotateY(180deg);
                 transform: rotateY(180deg);
         background-color: white;
         color: rgba(0, 0, 0, 0.87);
-        font-size: .8em; }
+        font-size: .8em;
+        font-weight: 500; }
   #team ul.people .back,
   #team ul.people .front,
   #team ul.people li {
@@ -317,3 +351,82 @@ header {
     height: 300px; }
   #team p {
     font-weight: 400; }
+
+section#events ul {
+  padding-left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+          align-content: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  section#events ul li {
+    min-width: 400px;
+    height: 500px;
+    list-style: none;
+    -webkit-box-flex: 100;
+    -webkit-flex-grow: 100;
+        -ms-flex-positive: 100;
+            flex-grow: 100;
+    position: relative;
+    -webkit-transition: .2s;
+    transition: .2s; }
+    section#events ul li a {
+      color: white;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+    section#events ul li .logo {
+      width: 15em;
+      margin: 50px auto 0;
+      pointer-events: none; }
+    section#events ul li p {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%);
+      white-space: nowrap; }
+    section#events ul li .background {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: #121417;
+      background-blend-mode: multiply;
+      -webkit-transition: .5s;
+      transition: .5s; }
+    section#events ul li:hover .background {
+      background-color: #333842 !important; }
+    section#events ul li#hackstart-summer .background {
+      background: url("../assets/event-hackstart.jpg") no-repeat center center;
+      background-size: cover;
+      background-color: #121417; }
+    section#events ul li#local-hack-day .logo {
+      width: 5em; }
+    section#events ul li#local-hack-day .background {
+      background: url("../assets/event-hackahs.jpg") no-repeat center center;
+      background-size: cover;
+      background-color: #121417; }
+    section#events ul li#local-hack-day .logo {
+      width: 5em; }
+    section#events ul li#local-hack-day .background {
+      background: url("../assets/event-hackahs.jpg") no-repeat center center;
+      background-size: cover;
+      background-color: #121417; }
+    section#events ul li#refugee-hack .logo img {
+      width: 5em; }
+    section#events ul li#refugee-hack .background {
+      background: url("../assets/event-refugeehack.jpg") no-repeat center center;
+      background-size: cover;
+      background-color: #121417; }

@@ -27,6 +27,17 @@ p.hint {
   margin: 0;
 }
 
+a {
+  color: $md-blue;
+  transition: .2s;
+  &:hover {
+    color: darken($md-blue, 10%);
+  }
+  &:focus, &:active {
+    color: darken($md-blue, 20%);
+  }
+}
+
 ul.blocks {
   margin: 0;
 
@@ -38,13 +49,22 @@ ul.blocks {
 
 section {
   width: 100%;
-  padding: 100px 0;
+  padding: 70px 0;
   text-align: center;
 }
 
+a.down {
+  color: $primary-light-color;
+  transition: .2s;
+  font-size: 1.5em;
+  &:hover {
+    color: $secondary-light-color;
+  }
+}
 
 @import "toc";
 @import "header";
 @import "about";
 @import "why";
 @import "team";
+@import "event";
