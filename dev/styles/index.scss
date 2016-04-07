@@ -3,9 +3,12 @@
 @import "typejs";
 @import "button";
 
+html, body {
+  background-color: $black;
+}
+
 body {
   width: 100%;
-  background-color: $black;
   color: $primary-light-color;
   font-size: calc((18/16*100%) + (18 - 16) * (100vw - 600px) / (1000 - 600));
   box-sizing: border-box;
@@ -68,3 +71,5 @@ a.down {
 @import "why";
 @import "team";
 @import "event";
+@import "footer";
+@import "involve";

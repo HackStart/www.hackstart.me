@@ -8,7 +8,7 @@
 	<style>
 		@font-face {
 		font-family: NexaLight;
-		src: url("font/NexaLight.otf") format("opentype");
+		src: url("../font/NexaLight.otf") format("opentype");
 		}
 
 	</style>

@@ -5,6 +5,7 @@
   position: fixed;
   top: 0;
   box-shadow: $md-box-shadow-2;
+  z-index: 999;
 
   a.home {
     margin-left: 50px;
