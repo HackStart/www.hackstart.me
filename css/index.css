@@ -553,10 +553,49 @@ ul.involve {
       background-size: cover;
       background-color: #545d6e; }
     ul.involve li#participate {
-      background: url("../assets/involve-mentor.jpg") no-repeat center center;
+      background: url("../assets/involve-mentor.JPG") no-repeat center center;
       background-size: cover;
       background-color: #545d6e; }
     ul.involve li#team {
-      background: url("../assets/involve-team.jpg") no-repeat center center;
+      background: url("../assets/involve-team.JPG") no-repeat center center;
       background-size: cover;
       background-color: #545d6e; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.scene .scene_element {
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both; }
+
+.scene .fadein {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn; }
+
+.scene .second_frame {
+  -webkit-animation-delay: .25s;
+          animation-delay: .25s; }
+
+.scene.is-exiting .scene_element {
+  -webkit-animation-direction: alternate-reverse;
+          animation-direction: alternate-reverse; }
+
+@media (max-width: 720px) {
+  .toc {
+    display: none; }
+  header {
+    height: 100vh;
+    margin-top: 0; } }

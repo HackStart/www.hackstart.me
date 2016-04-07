@@ -73,3 +73,15 @@ a.down {
 @import "event";
 @import "footer";
 @import "involve";
+@import "anim";
+
+@media(max-width: 720px) {
+  .toc {
+    display: none;
+  }
+
+  header {
+    height: 100vh;
+    margin-top: 0;
+  }
+}
